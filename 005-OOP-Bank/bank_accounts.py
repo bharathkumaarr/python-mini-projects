@@ -50,3 +50,16 @@ class InterestRewardAcct(BankAccount):
         self.balance = self.balance+ (amount * 1.05)
         print("\n Deposit Complete.")
         self.get_balance()
+
+
+class SaavingsAcct(InterestRewardAcct):
+    def __init__(self, initialAmount, acctName):
+        super().__init__(initialAmount, acctName)
+        self.fee = 5
+    def withdraw(self, amount):
+        try: 
+            self.viableTransaction(amount+self.fee)
+            self.balance=self.balance-(amount+self.fee)
+            print("\n withdraw complplete. $5 fee")
+        except BalanceException as error:
+            print(f'\nWithdraw interuppted : {error}')

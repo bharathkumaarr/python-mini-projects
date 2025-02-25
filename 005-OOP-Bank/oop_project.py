@@ -17,3 +17,9 @@ jim = InterestRewardAcct(1000, 'jim')
 jim.get_balance()
 jim.deposit(100)
 jim.transfer(100, Bharath)
+
+
+blaze = SaavingsAcct(1000, 'blaze')
+blaze.get_balance()
+blaze.deposit(100)
+blaze.transfer(1000, john)
