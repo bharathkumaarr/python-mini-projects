@@ -9,9 +9,11 @@ john.get_balance()
 
 
 Bharath.deposit(500)
-
-
 Bharath.withdraw(100)
-
-
 Bharath.transfer(10, john)
+
+
+jim = InterestRewardAcct(1000, 'jim')
+jim.get_balance()
+jim.deposit(100)
+jim.transfer(100, Bharath)
